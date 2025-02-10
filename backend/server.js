@@ -18,3 +18,5 @@ sequelize.sync().then(() => {
     console.log('Database connected');
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }).catch(err => console.log('Error connecting to database:', err));
+const cors = require("cors");
+app.use(cors({ origin: "*" })); // Allow frontend to call backend
